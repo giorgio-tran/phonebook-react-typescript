@@ -54,6 +54,7 @@ app.on('activate', () => {
 
 const exp = express();
 exp.use(express.json());
+exp.use(express.static('build'));
 
 const PORT = 2020;
 
