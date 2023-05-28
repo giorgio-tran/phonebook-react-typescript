@@ -2,6 +2,151 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  background-image: linear-gradient(to top left, #9904d976, #1E0D8C);
+}
+
+input {
+  border: none;
+  background-color: #dce6f2ea;
+  border-radius: 4px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.300);
+}
+
+/* App.js */
+/* Parent container */
+.parent-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*Container */
+.container {
+  border: 3px solid #cbd4df;
+  background-color: #dce6f2;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 5px 10px 40px rgba(0, 0, 0, 0.600);
+  width: 90vw;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8%;
+  padding: 2%;
+}
+
+/* Left and right child containers */
+.left, .right {
+  min-width: 270px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2% 2%;
+}
+
+/* end App.js */
+
+/* Notification */
+.added, .error {
+  width: 30%;
+  height: 20%;
+  color: white;
+  background: #1E0D8C;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 80%;
+}
+
+.error {
+  background: #6907F2;
+}
+/* End notification */
+
+.text-and-box {
+  width: 100%;
+  display: flex;
+  padding-bottom: 2%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-parent {
+  padding-top: 10px;
+}
+
+.add {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-image: linear-gradient(to top left, #6907f2, #9904d9ab);
+  color:#dce6f2ea;
+  border-radius: 6px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.601);
+}
+
+/* List of contacts */
+.Contacts::-webkit-scrollbar {
+  width: 6px;
+}
+
+.Contacts::-webkit-scrollbar-thumb {
+  background: #b3bcc6;
+  border-radius: 6px;
+}
+
+.Contacts::-webkit-scrollbar-track {
+  background:#cbd4df;
+}
+
+.Contacts {
+  height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.person-name {
+  font-size: larger;
+}
+
+.person-number {
+  font-size: smaller;
+}
+
+.delete-and-gap {
+  display: flex;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-image:linear-gradient(to top left, #9904d9eb, #4d04e9c7);
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 4px black;
+}
+
+.delete-gap {
+  width: 4px;
+}
+
+/* Animations */
+.add:hover, .delete:hover {
+  background-color: gray;
 }

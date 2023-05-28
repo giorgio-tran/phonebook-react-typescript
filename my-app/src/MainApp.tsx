@@ -1,6 +1,10 @@
 const MainApp = () => {
   return (
-    <div>Hello World!</div>    
+    <div className="parent-container">
+      <div className="container">
+
+      </div>
+    </div>
   )
 }
 
