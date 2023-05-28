@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import AddContact from "./frontend/AddContact";
 
-interface People {
+export type People = {
   name: string,
   phoneNumber: string
 }
+
+export type ContactType = People[]
 
 const MainApp = () => {
   const peopleList = [
@@ -26,7 +29,7 @@ const MainApp = () => {
   return (
     <div className="parent-container">
       <div className="container">
-        
+        <AddContact contacts={contacts} setContacts={setContacts} />
       </div>
     </div>
   )
