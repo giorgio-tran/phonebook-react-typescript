@@ -1,12 +1,6 @@
 import { useState } from "react"
-import { ContactType, People } from "../MainApp"
 
-type AddContactProps = {
-  contacts: ContactType,
-  setContacts: React.Dispatch<React.SetStateAction<People[]>>
-}
-
-const AddContact = ({ contacts, setContacts }: AddContactProps) => {
+const AddContact = () => {
   const [name, setName] = useState<string>("")
   const [number, setNumber] = useState<string>("")
 
