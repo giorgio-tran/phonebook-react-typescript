@@ -92,6 +92,7 @@ input {
   color:#dce6f2ea;
   border-radius: 6px;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.601);
+  cursor: pointer;
 }
 
 /* List of contacts */
@@ -146,6 +147,18 @@ input {
   width: 4px;
 }
 
+.form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 /* Animations */
 .add:hover, .delete:hover {
   background-color: gray;
