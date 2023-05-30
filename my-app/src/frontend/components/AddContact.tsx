@@ -1,20 +1,14 @@
 import { useState, useContext } from "react"
-import { ContactsContext } from "./Contexts/ContactsContext"
-import { PeopleType } from "../MainApp";
+import { ContactsContext } from "../contexts/ContactsContext"
 
 const AddContact = () => {
   const { contacts, setContacts } = useContext(ContactsContext);
   const [name, setName] = useState<string>("")
   const [number, setNumber] = useState<string>("")
-  const temp: PeopleType[] = contacts;
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    temp.push({
-      name: name,
-      phoneNumber: number
-    })
-    setContacts(temp);
+    setContacts((current) => [...current, {name: name, phoneNumber: number}] );
     setName("");
     setNumber("");
     console.log(contacts);
