@@ -1,15 +1,16 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { ContactsContext } from "./Contexts/ContactsContext"
+import { ContactsContextType } from "./Contexts/ContactsContext"
+
 
 const AddContact = () => {
+  const { contacts, setContacts } = useContext(ContactsContext);
   const [name, setName] = useState<string>("")
   const [number, setNumber] = useState<string>("")
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log({
-      name: name,
-      number: number
-    })
+    console.log(contacts);
   }
 
   return (

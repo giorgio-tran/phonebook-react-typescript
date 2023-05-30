@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import AddContact from "./frontend/AddContact";
+import { ContactsProvider } from "./frontend/Contexts/ContactsContext";
 
-export type People = {
+export type PeopleType = {
   name: string,
   phoneNumber: string
 }
 
-export type ContactType = People[]
+export type ContactType = PeopleType[];
 
 const MainApp = () => {
   const peopleList = [
@@ -20,16 +21,14 @@ const MainApp = () => {
     }
   ]
 
-  const [contacts, setContacts] = useState<People[]>([])
-
-  useEffect(() => {
-    setContacts(peopleList);
-  }, []);
-
   return (
     <div className="parent-container">
       <div className="container">
-        <AddContact contacts={contacts} setContacts={setContacts} />
+        <ContactsProvider>
+          <div>
+            <AddContact />
+          </div>
+        </ContactsProvider>
       </div>
     </div>
   )

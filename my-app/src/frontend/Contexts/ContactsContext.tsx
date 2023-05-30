@@ -1,6 +1,39 @@
-import { createContext } from "react";
-import { People } from "../../MainApp";
+import { ReactElement, ReactNode, createContext, useState } from "react";
+import { PeopleType } from "../../MainApp";
 
-type ContactsContextType = People[] | React.Dispatch<React.SetStateAction<People[]>>;
+export type ContactsContextType = {
+   contacts: PeopleType[],
+   setContacts: React.Dispatch<React.SetStateAction<PeopleType[]>>,
+}
 
-export const ContactsContext = createContext<ContactsContextType>([]);
+const initState: PeopleType[] = [
+  {
+    "name": "jack",
+    "phoneNumber": "8082222222"
+  },
+  {
+    "name": "zoe",
+    "phoneNumber": "8084222222"
+  }
+]
+
+const initContextState: ContactsContextType = { 
+  contacts: [],
+  setContacts: () => null,
+};
+
+export const ContactsContext = createContext<ContactsContextType>(initContextState);
+
+type ChildrenType = {
+  children?: ReactNode
+}
+
+export const ContactsProvider = ({ children }: ChildrenType): ReactElement => {
+  const [contacts, setContacts] = useState<PeopleType[]>(initState);
+
+  return (
+    <ContactsContext.Provider value={{contacts, setContacts}}>
+      {children}
+    </ContactsContext.Provider>
+  )
+}
