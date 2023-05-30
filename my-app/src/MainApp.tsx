@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import AddContact from "./frontend/AddContact";
 import { ContactsProvider } from "./frontend/Contexts/ContactsContext";
 
@@ -10,17 +9,6 @@ export type PeopleType = {
 export type ContactType = PeopleType[];
 
 const MainApp = () => {
-  const peopleList = [
-    {
-      name: "Jack",
-      phoneNumber: "8082222222"
-    },
-    {
-      name: "Jeffrey",
-      phoneNumber: "8089999999"
-    }
-  ]
-
   return (
     <div className="parent-container">
       <div className="container">
