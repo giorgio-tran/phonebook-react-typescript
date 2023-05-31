@@ -11,7 +11,6 @@ const AddContact = () => {
     setContacts((current) => [...current, {name: name, phoneNumber: number}] );
     setName("");
     setNumber("");
-    console.log(contacts);
   }
 
   return (
