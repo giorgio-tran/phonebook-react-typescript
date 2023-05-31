@@ -10,9 +10,8 @@ const Contact = ({ name, phoneNumber }: PeopleType) => {
     </div>
     <div className='delete-and-gap'>
       <button className='delete' onClick={() => {console.log("delete:", name)}}>
-        <div>&#215;</div>
+        &#215;
       </button>
-      <div className='delete-gap'></div>
     </div>
   </div>
   )

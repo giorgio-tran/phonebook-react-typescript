@@ -128,19 +128,17 @@ input {
 }
 
 .delete {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+  margin: auto;
+  width: 2.4rem;
+  height: 2.4rem;
   background-image:linear-gradient(to top left, #9904d9eb, #4d04e9c7);
-  font-size: 1.6rem;
-  font-weight: 100;
+  font-size: 2rem;
   color: white;
   border: none;
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 1px 2px 4px black;
+  cursor: pointer;
 }
 
 .delete-gap {
