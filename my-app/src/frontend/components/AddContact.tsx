@@ -2,7 +2,7 @@ import { useState, useContext } from "react"
 import { ContactsContext } from "../contexts/ContactsContext"
 
 const AddContact = () => {
-  const { contacts, setContacts } = useContext(ContactsContext);
+  const { setContacts } = useContext(ContactsContext);
   const [name, setName] = useState<string>("")
   const [number, setNumber] = useState<string>("")
 

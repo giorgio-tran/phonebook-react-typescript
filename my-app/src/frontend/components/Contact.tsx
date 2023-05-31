@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ContactsContext } from "../contexts/ContactsContext";
 
 const Contact = ({ name, phoneNumber }: PeopleType) => { 
-const { contacts, setContacts } = useContext(ContactsContext);
+const { setContacts } = useContext(ContactsContext);
 const handleDeletion = () => {
   setContacts((current) => current.filter((contact) => {
     return JSON.stringify(contact) !== JSON.stringify({name: name, phoneNumber: phoneNumber})
