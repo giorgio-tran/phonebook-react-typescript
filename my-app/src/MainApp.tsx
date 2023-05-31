@@ -1,5 +1,7 @@
-import AddContact from "./frontend/AddContact";
-import { ContactsProvider } from "./frontend/Contexts/ContactsContext";
+import AddContact from "./frontend/components/AddContact";
+import ListContacts from "./frontend/components/ListContacts";
+import Search from "./frontend/components/Search";
+import { ContactsProvider } from "./frontend/contexts/ContactsContext";
 
 export type PeopleType = {
   name: string,
@@ -14,8 +16,10 @@ const MainApp = () => {
       <div className="container">
         <ContactsProvider>
           <div>
+            <Search />
             <AddContact />
           </div>
+          <ListContacts />
         </ContactsProvider>
       </div>
     </div>
