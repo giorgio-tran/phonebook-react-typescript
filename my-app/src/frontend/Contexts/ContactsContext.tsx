@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactElement, createContext, useState } from "react";
 import { PeopleType } from "../../MainApp";
 
 export type ContactsContextType = {
@@ -25,10 +25,10 @@ const initContextState: ContactsContextType = {
 export const ContactsContext = createContext<ContactsContextType>(initContextState);
 
 type ChildrenType = {
-  children?: ReactNode
+  children?: ReactElement | ReactElement[]
 }
 
-export const ContactsProvider = ({ children }: ChildrenType): ReactNode => {
+export const ContactsProvider = ({ children }: ChildrenType): ReactElement => {
   const [contacts, setContacts] = useState<PeopleType[]>(initState);
 
   return (
